@@ -96,3 +96,6 @@ users_dotfiles:
     creates: '~/.zshrc'
     shell: '/bin/zsh'
 
+# Default value for the ``home_mode`` variable for users.
+# If undefined, the home mode will not be changed.
+# users_default_home_mode: '0750'
