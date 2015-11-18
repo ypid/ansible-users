@@ -26,7 +26,7 @@
     password: '{{ item.password | default("*") }}'
     update_password: '{{ item.update_password | default("on_create") }}'
     system: '{{ item.system | d((True | bool) if (users_default_system | bool) else omit) }}'
-    shell: '{{ item.shell | default(omit) }}'
+    shell: '{{ item.shell | d(users_default_shell | default(omit)) }}'
     home: '{{ item.home | default(omit) }}'
     createhome: '{{ item.createhome | default(omit) }}'
     expires: '{{ item.expires | default(omit) }}'
